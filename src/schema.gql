@@ -2,6 +2,26 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Author {
+  id: String!
+  firstName: String
+  lastName: String
+}
+
 type Query {
   demo: String!
+}
+
+type Mutation {
+  demoData(inputData: AuthorInput!): Author!
+}
+
+input AuthorInput {
+  id: String!
+  firstName: String!
+  lastName: String!
+}
+
+type Subscription {
+  authorAdded: Author!
 }
