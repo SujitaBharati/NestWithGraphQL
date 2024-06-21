@@ -12,7 +12,6 @@ export class DemoCommandHandler implements ICommandHandler<DemoCommand> {
       firstName: command.firstname,
       lastName: command.lastname,
     };
-    console.log('data', data);
     this.pubSub.publish('authorAdded', { authorAdded: data });
     return data;
   }
